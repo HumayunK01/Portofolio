@@ -58,12 +58,12 @@ header .menu ul li a:hover{
 @media only screen and (max-width: 450px) {
     header{
         padding: 0;
+        justify-content: space-between;
     }
     header .logo a{
-        font-size: 15px;
+        font-size: 22px;
     }
     .menu ul li a{
-        margin: 0 10px;
         font-size: 15px;
     }
 }
@@ -112,8 +112,12 @@ header .menu ul li a:hover{
     transition: all ease 0.2s;
 }
 
-.hero .info .icons .icon:hover{
-    background-color: var(--secondary-color);
+.hero .info .icons .icon1:first-child{
+    background-color: #0A66C2;
+}
+
+.hero .info .icons .icon2:first-child{
+    background-color: #0D1117;
 }
 
 .hero img{
@@ -124,11 +128,26 @@ header .menu ul li a:hover{
 @media only screen and (max-width: 450px){
     .hero{
         flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero .info{
+        z-index: 1;
     }
     .hero .info h1{
         font-size: 2em;
     }
     .hero img{
-        width: 100%;
+        width: 105%;
+    }
+    .hero .info .icons{
+        display: flex;
+        justify-content: space-between;
+    }
+    .hero .info .icons .icon1:first-child{
+        background-color: #0A66C2;
+    }
+    .hero .info .icons .icon2:first-child{
+        background-color: #0D1117;
     }
 }
