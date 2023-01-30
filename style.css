@@ -55,7 +55,7 @@ header .menu ul li a:hover{
     border-bottom: 3px solid var(--secondary-color);
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 450px) {
     header{
         padding: 0;
     }
@@ -121,7 +121,7 @@ header .menu ul li a:hover{
     object-fit: cover;
 }
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 450px){
     .hero{
         flex-direction: column-reverse;
     }
