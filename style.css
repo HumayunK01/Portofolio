@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
 :root{
-    --primary-color: #000;
-    --secondary-color: #3766F4;
+    --primary-color: #0A66C2;
+    --secondary-color: #0D1117;
 }
 
 *{
@@ -14,11 +14,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    padding: 20px 4%;
+html{
+    scroll-behavior: smooth ;
 }
 
+/* body{
+    padding: 20px 4%;
+} */
+
 header{
+    padding: 20px 4%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +40,7 @@ header .logo a{
 }
 
 header .logo a span{
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 header .menu ul li{
@@ -47,12 +52,12 @@ header .menu ul li a:first-child{
 }
 
 header .menu ul li a{
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 500;
 }
 
 header .menu ul li a:hover{
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 @media only screen and (max-width: 450px) {
@@ -75,12 +80,14 @@ header .menu ul li a:hover{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    padding: 20px 90px;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     position: relative;
+    overflow: hidden;
 }
 
 .hero .info{
@@ -95,7 +102,7 @@ header .menu ul li a:hover{
 
 .hero .info h1 span{
     font-weight: 600;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .hero .info .icons{
@@ -104,7 +111,7 @@ header .menu ul li a:hover{
 }
 
 .hero .info .icons .icon{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: #fff;
     border-radius: 50%;
     padding: 20px;
@@ -112,12 +119,12 @@ header .menu ul li a:hover{
     transition: all ease 0.2s;
 }
 
-.hero .info .icons .icon1:first-child{
-    background-color: #0A66C2;
+.hero .info .icons .icon1{
+    background-color: var(--primary-color);
 }
 
-.hero .info .icons .icon2:first-child{
-    background-color: #0D1117;
+.hero .info .icons .icon2{
+    background-color: var(--secondary-color);
 }
 
 .hero img{
@@ -128,8 +135,6 @@ header .menu ul li a:hover{
 @media only screen and (max-width: 450px){
     .hero{
         flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
     }
     .hero .info{
         z-index: 1;
@@ -144,10 +149,51 @@ header .menu ul li a:hover{
         display: flex;
         justify-content: space-between;
     }
-    .hero .info .icons .icon1:first-child{
-        background-color: #0A66C2;
+}
+
+.part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 20px 4%;
+}
+
+.part2 .info2 h1{
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.part2 .info2 span{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.part2 .info2 p{
+    margin-top: 40px;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.part2 img{
+    width: 60%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 450px){
+    .part2{
+        display: flex;
+        flex-direction: column;
     }
-    .hero .info .icons .icon2:first-child{
-        background-color: #0D1117;
+    .part2 .info2 h1{
+        font-size: 2em;
+    }
+    .part2 .info2 p{
+        margin-top: 20px;
+        color: grey;
+    }
+    .part2 img{
+        width: 110%;
     }
 }
