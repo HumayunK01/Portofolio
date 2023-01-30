@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+:root{
+    --primary-color: #000;
+    --secondary-color: #3766F4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    padding: 20px 4%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+}
+
+header .logo a{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+header .logo a span{
+    color: var(--secondary-color);
+}
+
+header .menu ul li{
+    display: inline-block;
+}
+
+header .menu ul li a:first-child{
+    margin-right: 20px;
+}
+
+header .menu ul li a{
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+header .menu ul li a:hover{
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+@media only screen and (max-width: 550px) {
+    header{
+        padding: 0;
+    }
+    header .logo a{
+        font-size: 15px;
+    }
+    .menu ul li a{
+        margin: 0 10px;
+        font-size: 15px;
+    }
+}
+/* Header ends here */
+
+.hero{
+    background-image: url(assets/background.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.hero .info{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .info h1{
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.hero .info h1 span{
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.hero .info .icons{
+    margin-top: 40px;
+    font-size: 1.3em;
+}
+
+.hero .info .icons .icon{
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.hero .info .icons .icon:hover{
+    background-color: var(--secondary-color);
+}
+
+.hero img{
+    width: 50%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 550px){
+    .hero{
+        flex-direction: column-reverse;
+    }
+    .hero .info h1{
+        font-size: 2em;
+    }
+    .hero img{
+        width: 100%;
+    }
+}
